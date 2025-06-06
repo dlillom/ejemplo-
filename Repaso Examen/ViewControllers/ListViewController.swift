@@ -56,7 +56,7 @@ class ListViewController: UIViewController, UITableViewDataSource {
                 return
             }
             
-            let (data, response) = try await URLSession.shared.data(from: url)
+            let (data,            response) = try await URLSession.shared.data(from: url)
             
             let result = try JSONDecoder().decode(Recipes.self, from: data)
             recipeList = result.recipes
